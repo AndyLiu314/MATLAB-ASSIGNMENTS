@@ -31,3 +31,9 @@ grid on;
 % Set axis limits
 xlim([0, 4]);
 ylim([-5,5]);
+
+expand_a = 12;
+expand_n = 5;
+expand_x = 7;
+result = fexpand(expand_a, expand_n, expand_x);
+disp(['f(', num2str(expand_x), ') = ', num2str(result)]);
