@@ -14,7 +14,7 @@ function fx = fexpand(a, n, x)
     % Compute the expanded form using the binomial theorem
     for k = 0:n
         binomial_coeff = nchoosek(n, k);
-        fx = fx + (-a)^k * binomial_coeff * x^(n - k);
+        fx = fx + (-a).^k * binomial_coeff * x.^(n - k);
     end
 end
 
