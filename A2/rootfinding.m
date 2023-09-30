@@ -27,4 +27,3 @@ y_neg = cos(x_neg);
 plot(x_neg, y_neg, 'DisplayName', 'f-(x) = cos(x)', 'LineWidth', 1.3);
 legend('show', 'FontSize', 10);
 hold off;
-
