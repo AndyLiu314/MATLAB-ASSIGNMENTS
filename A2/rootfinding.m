@@ -11,9 +11,9 @@ ylabel('f(x)');
 grid on;
 xlim([-6*pi, 6*pi]); 
 
-syms x;
-pos_limit = limit(1./(1 + exp(-2*x)), x, Inf);
-neg_limit = limit(1./(1 + exp(-2*x)), x, -Inf);
+syms x_syms;
+pos_limit = limit(1./(1 + exp(-2*x_syms)), x_syms, Inf);
+neg_limit = limit(1./(1 + exp(-2*x_syms)), x_syms, -Inf);
 disp(['Limit as x approaches positive infinity: ', char(pos_limit)]);
 disp('Use f+(x) = cos(x) + 1 for x > 0 to approximate f for large positive values of x');
 disp(['Limit as x approaches negative infinity: ', char(neg_limit)]);
@@ -27,3 +27,9 @@ y_neg = cos(x_neg);
 plot(x_neg, y_neg, 'DisplayName', 'f-(x) = cos(x)', 'LineWidth', 1.3);
 legend('show', 'FontSize', 10);
 hold off;
+
+func_y = @(x) cos(x) + 1./(1 + exp(-2*x));
+[r, niter, rlist] = bisect2(func_y, [-4, 0], 0.000001);
+disp(['Root (r): ', num2str(r), ', Number of iterations: ', num2str(niter)]);
+%disp('List of intermediate results:');
+%disp(num2str(rlist));
