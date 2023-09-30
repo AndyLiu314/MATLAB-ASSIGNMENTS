@@ -3,7 +3,7 @@
 % ID: 301472847
 x_og = linspace(-6*pi, 6*pi, 10000);
 y_og = cos(x_og) + 1./(1 + exp(-2*x_og));
-plot(x_og, y_og, 'DisplayName', 'f(x) = cos(x) + 1/(1 + e^{-2x})','LineWidth', 1.3);
+plot(x_og, y_og, 'DisplayName', 'f(x) = cos(x) + 1/(1 + e^{-2x})');
 hold on;
 title('f(x) = cos(x) + 1/(1 + e^{-2x}) on the interval -6\pi to 6\pi');
 xlabel('x');
@@ -21,10 +21,10 @@ disp('Use f-(x) = cos(x) for x < 0 to approximate f for large negative values of
 
 x_pos = linspace(0, 6*pi, 10000);
 y_pos = cos(x_pos) + 1;
-plot(x_pos, y_pos, 'DisplayName', 'f+(x) = cos(x) + 1', 'LineWidth', 1.3);
+plot(x_pos, y_pos, 'DisplayName', 'f(x) = cos(x) + 1/(1 + e^{-2x})');
 x_neg = linspace(-6*pi, 0, 10000);
 y_neg = cos(x_neg);
-plot(x_neg, y_neg, 'DisplayName', 'f-(x) = cos(x)', 'LineWidth', 1.3);
-legend('show', 'FontSize', 10);
+plot(x_neg, y_neg, 'DisplayName', 'f(x) = cos(x) + 1/(1 + e^{-2x})');
+legend('show');
 hold off;
 
