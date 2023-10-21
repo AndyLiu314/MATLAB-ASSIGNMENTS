@@ -53,3 +53,8 @@ fp_func = @(x) acos(-1./(1 + exp(-2*x)));
 [xfinal1, fpiter1, xlist1] = fixedpt( fp_func, 3.0, 0.000001 );
 disp(['Fixed Point, Intial Guess x = -1.5 (): ', num2str(xfinal), ', Iterations: ', num2str(fpiter)]);
 disp(['Fixed Point Root, Intial Guess x = 3.0 (): ', num2str(xfinal1), ', Iterations: ', num2str(fpiter1)]);
+
+func_new = @(x) 2*x^3 - 5*x^2 + 5;
+func_deriv = @(x) 6*x^2 - 10*x;
+[root2, fpiter, xlist] = newton( func_new, func_deriv, 5/3, 0.000001, 10 );
+disp(['Answer ', num2str(root2)]);
