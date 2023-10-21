@@ -1,0 +1,15 @@
+EN1 = GERandom( 5, 500 ); 
+EN2 = GERandom( 10, 500 ); 
+EN3 = GERandom( 100, 500 ); 
+EN4 = GERandom( 250, 500 ); 
+EN5 = GERandom( 500, 500 ); 
+EN6 = GERandom( 1000, 500 ); 
+EN7 = GERandom( 2000, 500 ); 
+EN8 = GERandom( 2500, 500 ); 
+EN9 = GERandom( 3000, 500 ); 
+%disp(num2str(EN));
+
+EN = [EN1 EN2 EN3 EN4 EN5 EN6 EN7 EN8 EN9];
+N = [5 10 100 250 500 1000 1500 2000 2500];
+loglog(N, EN, 'DisplayName', 'Log=log scale of mean error compared to matrix s');
+%p = polyfit(log10(N), log10(EN), 1)

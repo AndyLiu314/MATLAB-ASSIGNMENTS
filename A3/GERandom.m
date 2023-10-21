@@ -1,3 +1,5 @@
+function EN = GERandom( N, M )
+
 % GERANDOM: Gaussian elimination for a random matrix.
 %
 %     Over a series of M trials, compute the solution to A*x = b
@@ -6,8 +8,9 @@
 %
 % YOU NEED MODIFY THIS CODE FOR CA3.
 
-N = 10;  % matrix size
-M = 100; % number of trials
+%N = 10;  % matrix size
+%M = 100; % number of trials
+
 
 delta = zeros(M,1);  % vector of errors
 x = ones(N,1);       % exact solution vector
@@ -21,9 +24,3 @@ end
 
 % Compute average error over all trials
 EN = mean(delta)
-
-% Plot the error using a log scale
-semilogy(1:M, delta, 'bo')
-title(['Error for ' num2str(M) ' random ' num2str(N) 'x' num2str(N) ' matrices'])
-xlabel('N'), ylabel('Error')
-grid on, shg
