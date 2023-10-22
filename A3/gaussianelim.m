@@ -1,3 +1,7 @@
+% Computing Assignment #2
+% Author: Andy Liu
+% ID: 301472847
+
 EN1 = GERandom( 5, 500 ); 
 EN2 = GERandom( 10, 500 ); 
 EN3 = GERandom( 100, 500 ); 
