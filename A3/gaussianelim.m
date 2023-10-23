@@ -24,4 +24,3 @@ loglog(N, 10.^predicted_log_EN, 'r-', 'DisplayName', 'Linear Fit');
 xlabel('N');
 ylabel('EN');
 legend('show');
-
