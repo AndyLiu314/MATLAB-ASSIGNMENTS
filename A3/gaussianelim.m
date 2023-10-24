@@ -18,7 +18,7 @@ p = polyfit(log10(N), log10(EN), 1);
 predicted_log_EN = polyval(p, log10(N));
 
 loglog(N, EN, 'o', 'MarkerFaceColor', 'black', 'MarkerEdgeColor', 'black', 'DisplayName', 'Mean Error');
-title('Mean error EN gaussian elimination');
+title('Mean error EN in gaussian elimination');
 hold on;
 loglog(N, 10.^predicted_log_EN, 'r-', 'DisplayName', 'Linear Fit');
 xlabel('N');
