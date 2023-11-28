@@ -5,6 +5,8 @@
 % of the data used for the other spline examples.
 
 function s_values = perspline(x, y)
+    x = x.';
+    y = y.';
     % Set up the matrix
     y(1) = y(end);
     n = length(x) - 1;
