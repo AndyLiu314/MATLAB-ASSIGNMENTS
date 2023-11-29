@@ -13,33 +13,33 @@ Rx1 = spline(t1, x1, Leaf_tvalues); Sy1 = spline(t1, y1, Leaf_tvalues); % Interp
 per_Rx = perspline(t1, x1); per_Sy = perspline(t1, y1); % Periodic interpolation
 
 figure; % R v t
-plot(t_values, Rx, 'LineWidth', 2);
-xlabel('t');
-ylabel('R(t)');
-title('Cubic Spline: R(t) versus t');
+plot(tvalues, Rx, 'LineWidth', 3);
+xlabel('t', 'FontSize',14);
+ylabel('R(t)', 'FontSize',14);
+title('Cubic Spline: R(t) versus t', 'FontSize',16);
 figure; % S v t
-plot(t_values, Sy, 'LineWidth', 2);
-xlabel('t');
-ylabel('S(t)');
-title('Cubic Spline: S(t) versus t');
+plot(tvalues, Sy, 'LineWidth', 3);
+xlabel('t', 'FontSize',14);
+ylabel('S(t)', 'FontSize',14);
+title('Cubic Spline: S(t) versus t', 'FontSize',16);
 figure; % S v R
-plot(Rx, Sy, 'LineWidth', 2);
-xlabel('R(t)');
-ylabel('S(t)');
-title('Cubic Spline: S(t) versus R(t)');
+plot(Rx, Sy, 'LineWidth', 3);
+xlabel('R(t)', 'FontSize',14);
+ylabel('S(t)', 'FontSize',14);
+title('Cubic Spline: S(t) versus R(t)', 'FontSize',16);
 figure; % 4 Leaf Not-a-knot
-plot(Rx1, Sy1, 'LineWidth', 2);
-xlabel('x');
-ylabel('y');
-title('Four Leaf: S(t) versus R(t)');
+plot(Rx1, Sy1, 'LineWidth', 3);
+xlabel('x', 'FontSize',14);
+ylabel('y', 'FontSize',14);
+title('Four Leaf: S(t) versus R(t)', 'FontSize', 16);
 figure; % 4 Leaf periodic
-plot(per_Rx, per_Sy, 'LineWidth', 2);
-xlabel('R(t)');
-ylabel('S(t)');
-title('Periodic 4 Leaf: S(t) versus R(t)');
+plot(per_Rx, per_Sy, 'LineWidth', 3);
+xlabel('R(t)', 'FontSize',14);
+ylabel('S(t)', 'FontSize',14);
+title('Periodic 4 Leaf: S(t) versus R(t)', 'FontSize',16);
 
 load('mysignature.mat')
-n = numel(drawx);
+n = numel(x);
 drawt = 0:(n-1);
 drawx = drawx.';
 drawy = drawy.';
